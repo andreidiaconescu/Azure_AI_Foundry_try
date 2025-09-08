@@ -1,0 +1,70 @@
+{
+  "importSorter.sortConfiguration.customOrderingRules.rules": [
+    {
+      "type": "importMember",
+      "regex": "^$",
+      "orderLevel": 10,
+      "disableSort": true
+    },
+    {
+      "regex": "^[^.@]",
+      "orderLevel": 15
+    },
+    {
+      "regex": "^[@](?!\\/)",
+      "orderLevel": 15
+    },
+    {
+      "regex": "^@\\/",
+      "orderLevel": 30
+    },
+    {
+      "regex": "^[.]",
+      "orderLevel": 30
+    }
+  ],
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    ".history/*": true,
+    "frontend/.angular/*": true,
+    "admin/.angular/*": true
+  },
+  "files.exclude": {
+    "**/node_modules": false,
+    "**/dist": false,
+    "**/coverage": false,
+    ".mongo-data": false,
+    ".history/*": false,
+    "frontend/src/docs": false,
+    "api/src/app/public/docs": false
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "eslint.codeActionsOnSave.rules": ["*"],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "eslint.validate": ["javascript"],
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "angular.enable-strict-mode-prompt": false,
+  "prettier.printWidth": 160,
+  "editor.formatOnSave": false,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 160,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

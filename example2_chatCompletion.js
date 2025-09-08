@@ -14,7 +14,7 @@ export async function main() {
   const response = await client.chat.completions.create({
     messages: [
       { role: "system", content: "You are a helpful assistant." },
-      { role: "user", content: "I am going to Athens, what should I see?" },
+      { role: "user", content: "I am going to Alexandria, what should I see?" },
     ],
     max_tokens: 4096,
     temperature: 1,

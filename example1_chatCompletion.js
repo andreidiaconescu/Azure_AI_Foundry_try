@@ -3,7 +3,7 @@ import { AIProjectClient } from "@azure/ai-projects";
 import { DefaultAzureCredential } from "@azure/identity";
 
 // Get the Azure AI endpoint and deployment name from environment variables
-const endpoint = process.env.PROJECT_ENDPOINT;
+const endpoint = process.env.PROJECT_ENDPOINT_AZURE_OPEN_AI_CHAT_COMPLETIONS;
 const deployment = process.env.MODEL_DEPLOYMENT_NAME || "gpt-4o";
 
 // Create an Azure OpenAI Client

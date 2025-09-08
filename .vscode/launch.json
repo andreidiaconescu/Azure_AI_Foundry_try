@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+      "type": "node",
+      "request": "launch",
+      "name": "Run API",
+      "cwd": "${workspaceFolder}/api",
+      // "runtimeArgs": ["-r", "ts-node/register"],
+      "args": ["${workspaceFolder}/api/index.ts"],
+      "env": {
+        "MONGO_HOST": "localhost",
+        "MONGO_DB": "api-date",
+        "SERVICE_NAME": "API_Node",
+        "PORT": "4040"
+      },
+      "outputCapture": "std"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to API",
+      "protocol": "inspector",
+      "port": 5840,
+      "restart": true,
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Attach to Frontend",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3030/#",
+      "webRoot": "${workspaceFolder}",
+      "sourceMapPathOverrides": {
+        "webpack:/./*": "${webRoot}/*",
+        "webpack:/src/*": "${webRoot}/src/*",
+        "webpack:/*": "*",
+        "webpack:/./~/*": "${webRoot}/node_modules/*"
+      }
+    }
+  ]
+}
