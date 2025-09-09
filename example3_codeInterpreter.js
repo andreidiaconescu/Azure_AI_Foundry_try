@@ -29,7 +29,7 @@ export async function main() {
   debugger;
   // Upload file and wait for it to be processed
   const filePath =
-    import.meta.dirname + "/data/syntheticCompanyQuarterlyResults.csv";
+    `${import.meta.dirname}/data/syntheticCompanyQuarterlyResults.csv`;
   console.log('filePath', filePath);
   const localFileStream = fs.createReadStream(filePath);
   // console.log('localFileStream', localFileStream);
